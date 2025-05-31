@@ -21,16 +21,18 @@ export const herbsData = [
         alt: "Photo of nettle plant."
     },
     {
-        benefits: ["moody", "insomniac"],
+        benefits: ["medicinal", "immune-booster"],
+        name: "nettle",
         isCulinary: false,
-        image: "angry2.jpeg",
-        alt: "A cat looking moody"
+        image: "echinacea.jpg",
+        alt: "Photo of echinacea plant."
     },
     {
-        benefits: ["moody"],
+        benefits: ["medicinal", "anti-inflammatory", "anti-bacterial"],
+        name: "St. John's Wort",
         isCulinary: false,
-        image: "angry3.jpeg",
-        alt: "A cat looking moody"
+        image: "st-johns-wort.jpg",
+        alt: "Photo of St. John's Wort plant."
     },
     {
         benefits: ["confused", "sad"],
