@@ -27,19 +27,26 @@ function closeModal() {
 function renderHerb() {
     const herbObject = getMatchingHerbsArray();
 
-    for (let i = 0; i < herbObject.length; i++) {
-        memeModalInner.innerHTML += `
-        <a href="./media/${herbObject[i].image}">
-            <img 
-            id="herb-img"
-            class="herb-img" 
-            src="./media/${herbObject[i].image}"
-            alt="${herbObject[i].alt}"
-            >
-            <p>${herbObject[i].name}</p>
-        </a>
+    if (herbObject.length === 0) {
+        memeModalInner.innerHTML = `
+                                <p>No herbs found</p>
+                                `;
+    } else {
+        for (let i = 0; i < herbObject.length; i++) {
+            memeModalInner.innerHTML += `
+                                <a href="./media/${herbObject[i].image}">
+                                    <img 
+                                        id="herb-img"
+                                        class="herb-img" 
+                                        src="./media/${herbObject[i].image}"
+                                        alt="${herbObject[i].alt}"
+                                        >
+                                    <p>${herbObject[i].name}</p>
+                                </a>
         `;
+        }
     }
+
     memeModal.style.display = "flex";
 }
 //

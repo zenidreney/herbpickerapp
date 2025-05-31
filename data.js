@@ -21,8 +21,15 @@ export const herbsData = [
         alt: "Photo of nettle plant."
     },
     {
+        benefits: ["medicinal", "anti-microbial"],
+        name: "thyme",
+        isCulinary: true,
+        image: "thyme.jpg",
+        alt: "Photo of thyme plant."
+    },
+    {
         benefits: ["medicinal", "immune-booster"],
-        name: "nettle",
+        name: "echinacea",
         isCulinary: false,
         image: "echinacea.jpg",
         alt: "Photo of echinacea plant."

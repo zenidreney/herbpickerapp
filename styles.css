@@ -132,8 +132,10 @@ label{
 
 .herb-img{
     
-    max-width: 140px;
-    max-height: 140px;
+    width: 140px;
+    height: 140px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     border-radius: 5px;
 }
 
