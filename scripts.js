@@ -1,0 +1,97 @@
+import { herbsData } from "./data.js";
+
+const benefitSelect = document.getElementById("benefit");
+const getImageBtn = document.getElementById("get-image-btn");
+const gifsOnlyOption = document.getElementById("gifs-only-option");
+const memeModalInner = document.getElementById("meme-modal-inner");
+const memeModal = document.getElementById("meme-modal");
+const memeModalCloseBtn = document.getElementById("meme-modal-close-btn");
+
+memeModalCloseBtn.addEventListener("click", closeModal);
+document.body.addEventListener("click", function (e) {
+    if (e.target.id != "meme-modal" && e.target.id != "herb-img") {
+        closeModal();
+    }
+});
+getImageBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+
+getImageBtn.addEventListener("click", renderHerb);
+
+function closeModal() {
+    memeModal.style.display = "none";
+    memeModalInner.innerHTML = ``;
+}
+
+function renderHerb() {
+    const herbObject = getMatchingHerbsArray();
+
+    for (let i = 0; i < herbObject.length; i++) {
+        memeModalInner.innerHTML += `
+        <a href="./media/${herbObject[i].image}">
+            <img 
+            id="herb-img"
+            class="herb-img" 
+            src="./media/${herbObject[i].image}"
+            alt="${herbObject[i].alt}"
+            >
+            <p>${herbObject[i].name}</p>
+        </a>
+        `;
+        // console.log(herbObject[i].image)
+    }
+    memeModal.style.display = "flex";
+}
+
+function getSingleHerbObject() {
+    const herbsArray = getMatchingHerbsArray();
+
+    if (herbsArray.length === 1) {
+        return herbsArray[0];
+    } else {
+        const randomNumber = Math.floor(Math.random() * herbsArray.length);
+        return herbsArray[randomNumber];
+    }
+}
+
+function getMatchingHerbsArray() {
+    const selectedBenefit = benefitSelect.value;
+    const isCulinary = gifsOnlyOption.checked;
+
+    const matchingHerbsArray = herbsData.filter(function (herb) {
+        if (isCulinary) {
+            return herb.benefits.includes(selectedBenefit) && herb.isCulinary;
+        } else {
+            return herb.benefits.includes(selectedBenefit);
+        }
+    });
+    return matchingHerbsArray;
+}
+
+function getBenefitsArray(herbs) {
+    const benefitsArray = [];
+    for (let herb of herbs) {
+        for (let benefit of herb.benefits) {
+            if (!benefitsArray.includes(benefit)) {
+                benefitsArray.push(benefit);
+            }
+        }
+    }
+    return benefitsArray;
+}
+
+function renderBenefits(herbs) {
+    let selectedItems = ``;
+    const benefits = getBenefitsArray(herbs);
+    for (let benefit of benefits) {
+        selectedItems += `
+       
+            <option value="${benefit}">${benefit}</option>
+            
+       `;
+    }
+    benefitSelect.innerHTML = selectedItems;
+}
+
+renderBenefits(herbsData);
