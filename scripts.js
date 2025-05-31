@@ -39,21 +39,20 @@ function renderHerb() {
             <p>${herbObject[i].name}</p>
         </a>
         `;
-        // console.log(herbObject[i].image)
     }
     memeModal.style.display = "flex";
 }
-
-function getSingleHerbObject() {
-    const herbsArray = getMatchingHerbsArray();
-
-    if (herbsArray.length === 1) {
-        return herbsArray[0];
-    } else {
-        const randomNumber = Math.floor(Math.random() * herbsArray.length);
-        return herbsArray[randomNumber];
-    }
-}
+//
+//function getSingleHerbObject() {
+//    const herbsArray = getMatchingHerbsArray();
+//
+//    if (herbsArray.length === 1) {
+//        return herbsArray[0];
+//    } else {
+//        const randomNumber = Math.floor(Math.random() * herbsArray.length);
+//        return herbsArray[randomNumber];
+//    }
+//}
 
 function getMatchingHerbsArray() {
     const selectedBenefit = benefitSelect.value;
