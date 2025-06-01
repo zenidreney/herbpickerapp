@@ -76,4 +76,11 @@ export const herbsData = [
         image: "witch-hazel.jpg",
         alt: "Photo of witch hazel plant."
     },
+    {
+        benefits: ["medicinal", "digestive", "anti-stress", "sedative"],
+        name: "Catnip",
+        isCulinary: false,
+        image: "catnip.jpg",
+        alt: "Photo of catnip plant."
+    },
     ];
