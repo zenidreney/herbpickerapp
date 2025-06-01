@@ -37,7 +37,7 @@ header{
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 370px;
+    max-width: 370px;
     gap: 15px;
     padding: 10px 0 4px;
 }
@@ -51,7 +51,7 @@ header{
 .controls-container{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    max-width: 200px;
     margin: 0 auto;
 }
 
