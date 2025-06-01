@@ -1,8 +1,8 @@
 import { herbsData } from "./data.js";
 
 const benefitSelect = document.getElementById("benefit");
-const getImageBtn = document.getElementById("get-image-btn");
-const gifsOnlyOption = document.getElementById("gifs-only-option");
+const getImageBtn = document.getElementById("see-herbs-btn");
+const culinaryOnlyOption = document.getElementById("culinary-only-option");
 const memeModalInner = document.getElementById("meme-modal-inner");
 const memeModal = document.getElementById("meme-modal");
 const memeModalCloseBtn = document.getElementById("meme-modal-close-btn");
@@ -63,7 +63,7 @@ function renderHerb() {
 
 function getMatchingHerbsArray() {
     const selectedBenefit = benefitSelect.value;
-    const isCulinary = gifsOnlyOption.checked;
+    const isCulinary = culinaryOnlyOption.checked;
 
     const matchingHerbsArray = herbsData.filter(function (herb) {
         if (isCulinary) {

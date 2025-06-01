@@ -12,7 +12,7 @@
 <body>
 	<header>
 		<div class="header-inner">
-			<img src="media/mix-of-herbs.jpg" class="herbs-img">
+			<!--<img src="media/mix-of-herbs.jpg" class="herbs-img">-->
 			<div>
 				<h1>Herb Picker App</h1>
 				<h2>Your herb inspiration...</h2>
@@ -23,18 +23,21 @@
 		<h3>What kind of herb would you like?</h3>
 		<div class="controls-container">
 			
-			<div class="benefit-radios" id="benefit-radios"></div>
+			<div class="logo-img-container">
+			    <img src="media/mix-of-herbs.jpg" class="herbs-img">
+			</div>
 				<form class="select-box">
             		<label for="benefit">Use</label>
             			<select id = "benefit">
 								</select>		
         		</form>
 			
-			<div class="gifs-check">
-				<label for="gifs-only-option" class="gifs-check-label">Culinary Herbs Only</label>
-				<input type="checkbox" id="gifs-only-option">
+			<div class="culinary-check">
+				<label for="culinary-only-option" class="culinary-check-label">Culinary Herbs Only</label>
+				<input type="checkbox" id="culinary-only-option">
+				<p>*Obivously all herbs can be cooked, this will list only the herbs that are best known to add flavor.</p>
 			</div>
-			<button class="get-image-btn" id="get-image-btn">See Herbs</button>
+			<button class="see-herbs-btn" id="see-herbs-btn">See Herbs</button>
 		</div>
 	</main>
 		<div class="meme-modal" id="meme-modal">
