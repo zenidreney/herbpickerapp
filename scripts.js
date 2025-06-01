@@ -34,7 +34,7 @@ function renderHerb() {
     } else {
         for (let i = 0; i < herbObject.length; i++) {
             memeModalInner.innerHTML += `
-                                <a href="./media/${herbObject[i].image}">
+                                <a href="${herbObject[i].urlLink}">
                                     <img 
                                         id="herb-img"
                                         class="herb-img" 
