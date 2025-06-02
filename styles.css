@@ -121,14 +121,14 @@ label{
     border: 1px solid #252525;
     border-radius: 5px;
     width: 80%;
-    height: 80vh;
+    height: 80svh;
     background-color: #fff0ee;
 }
 
 .meme-modal-inner {
     display: flex;
     flex-wrap: wrap;
-    height: 60vh;
+    height: 90%;
     overflow: auto;
     align-items: center;
     justify-content: center;
