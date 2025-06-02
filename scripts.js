@@ -3,13 +3,13 @@ import { herbsData } from "./data.js";
 const benefitSelect = document.getElementById("benefit");
 const getImageBtn = document.getElementById("see-herbs-btn");
 const culinaryOnlyOption = document.getElementById("culinary-only-option");
-const memeModalInner = document.getElementById("meme-modal-inner");
-const memeModal = document.getElementById("meme-modal");
-const memeModalCloseBtn = document.getElementById("meme-modal-close-btn");
+const herbsModalInner = document.getElementById("herbs-modal-inner");
+const herbsModal = document.getElementById("herbs-modal");
+const herbsModalCloseBtn = document.getElementById("herbs-modal-close-btn");
 
-memeModalCloseBtn.addEventListener("click", closeModal);
+herbsModalCloseBtn.addEventListener("click", closeModal);
 document.body.addEventListener("click", function (e) {
-    if (e.target.id != "meme-modal" && e.target.id != "herb-img") {
+    if (e.target.id != "herbs-modal" && e.target.id != "herb-img") {
         closeModal();
     }
 });
@@ -20,20 +20,20 @@ getImageBtn.addEventListener("click", function (e) {
 getImageBtn.addEventListener("click", renderHerb);
 
 function closeModal() {
-    memeModal.style.display = "none";
-    memeModalInner.innerHTML = ``;
+    herbsModal.style.display = "none";
+    herbsModalInner.innerHTML = ``;
 }
 
 function renderHerb() {
     const herbObject = getMatchingHerbsArray();
 
     if (herbObject.length === 0) {
-        memeModalInner.innerHTML = `
+        herbsModalInner.innerHTML = `
                                 <p>No herbs found</p>
                                 `;
     } else {
         for (let i = 0; i < herbObject.length; i++) {
-            memeModalInner.innerHTML += `
+            herbsModalInner.innerHTML += `
                                 <a href="${herbObject[i].urlLink}">
                                     <img 
                                         id="herb-img"
@@ -47,7 +47,7 @@ function renderHerb() {
         }
     }
 
-    memeModal.style.display = "flex";
+    herbsModal.style.display = "flex";
 }
 //
 //function getSingleHerbObject() {
