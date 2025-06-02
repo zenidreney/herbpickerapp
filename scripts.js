@@ -42,9 +42,9 @@ function renderHerb() {
     const herbObject = getMatchingHerbsArray();
     
     if (culinaryOnlyOption.checked) {
-        herbsModalHeader.innerHTML = `<h2 class="herbs-modal-header">${benefitSelect.value} <span>Culinary</span></h2>`;
+        herbsModalHeader.innerHTML = `${benefitSelect.value} <span>Culinary</span>`;
     } else {
-        herbsModalHeader.innerHTML = `<h2 class="herbs-modal-header">${benefitSelect.value} <span>All</span></h2>`;        
+        herbsModalHeader.innerHTML = `${benefitSelect.value} <span>All</span>`;        
     }
 
     if (herbObject.length === 0) {
