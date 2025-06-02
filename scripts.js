@@ -1,31 +1,51 @@
+/*DATA FOR HERBS*/
+
 import { herbsData } from "./data.js";
+
+/*FETCH PAGE ELEMENTS*/
 
 const benefitSelect = document.getElementById("benefit");
 const getImageBtn = document.getElementById("see-herbs-btn");
 const culinaryOnlyOption = document.getElementById("culinary-only-option");
 const herbsModalInner = document.getElementById("herbs-modal-inner");
 const herbsModal = document.getElementById("herbs-modal");
+const herbsModalHeader = document.getElementById("herbs-modal-header");
 const herbsModalCloseBtn = document.getElementById("herbs-modal-close-btn");
 
-herbsModalCloseBtn.addEventListener("click", closeModal);
-document.body.addEventListener("click", function (e) {
-    if (e.target.id != "herbs-modal" && e.target.id != "herb-img") {
-        closeModal();
-    }
-});
-getImageBtn.addEventListener("click", function (e) {
-    e.stopPropagation();
-});
+/*EVENT LISTENERS*/
+
+/*Render the Herbs*/
 
 getImageBtn.addEventListener("click", renderHerb);
 
-function closeModal() {
+
+/*Close the Modal*/
+
+getImageBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+});
+herbsModalCloseBtn.addEventListener("click", closeHerbsModal);
+document.body.addEventListener("click", function (e) {
+    if (e.target.id != "herbs-modal" && e.target.id != "herb-img") {
+        closeHerbsModal();
+    }
+});
+
+/*FUNCTIONS*/
+
+function closeHerbsModal() {
     herbsModal.style.display = "none";
     herbsModalInner.innerHTML = ``;
 }
 
 function renderHerb() {
     const herbObject = getMatchingHerbsArray();
+    
+    if (culinaryOnlyOption.checked) {
+        herbsModalHeader.innerHTML = `<h2 class="herbs-modal-header">${benefitSelect.value} <span>Culinary</span></h2>`;
+    } else {
+        herbsModalHeader.innerHTML = `<h2 class="herbs-modal-header">${benefitSelect.value} <span>All</span></h2>`;        
+    }
 
     if (herbObject.length === 0) {
         herbsModalInner.innerHTML = `
@@ -49,17 +69,6 @@ function renderHerb() {
 
     herbsModal.style.display = "flex";
 }
-//
-//function getSingleHerbObject() {
-//    const herbsArray = getMatchingHerbsArray();
-//
-//    if (herbsArray.length === 1) {
-//        return herbsArray[0];
-//    } else {
-//        const randomNumber = Math.floor(Math.random() * herbsArray.length);
-//        return herbsArray[randomNumber];
-//    }
-//}
 
 function getMatchingHerbsArray() {
     const selectedBenefit = benefitSelect.value;

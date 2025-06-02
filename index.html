@@ -1,50 +1,51 @@
 <html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet" />
+		<title>Herb Picker App</title>
+	</head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="styles.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap" rel="stylesheet">
-	<title>Herb Picker App</title>
-</head>
-
-<body>
-	<header>
-		<div class="header-inner">
-			<!--<img src="media/mix-of-herbs.jpg" class="herbs-img">-->
-			<div>
-				<h1>Herb Picker App</h1>
-				<h2>Your herb inspiration...</h2>
+	<body>
+		<header>
+			<div class="header-inner">
+				<!--<img src="media/mix-of-herbs.jpg" class="herbs-img">-->
+				<div>
+					<h1>Herb Picker App</h1>
+					<h2>Your herb inspiration...</h2>
+				</div>
 			</div>
-		</div>
-	</header>
-	<main>
-		<h3>What kind of herb would you like?</h3>
-		<div class="controls-container">
-			
-			<div class="logo-img-container">
-			    <img src="media/mix-of-herbs.jpg" class="herbs-img">
-			</div>
+		</header>
+		<main>
+			<h3>What kind of herb would you like?</h3>
+			<div class="controls-container">
+				<div class="logo-img-container">
+					<img src="media/mix-of-herbs.jpg" class="herbs-img" />
+				</div>
 				<form class="select-box">
-            		<label for="benefit">Use</label>
-            			<select id = "benefit">
-								</select>		
-        		</form>
-			
-			<div class="culinary-check">
-				<label for="culinary-only-option" class="culinary-check-label">Culinary Herbs Only</label>
-				<input type="checkbox" id="culinary-only-option">
-				<p>*Obivously all herbs can be cooked and brewed into tea, this will list only the herbs that are best known to add flavor to solid cooked food and salads.</p>
+					<label for="benefit">Use</label>
+					<select id="benefit"></select>
+				</form>
+
+				<div class="culinary-check">
+					<label for="culinary-only-option" class="culinary-check-label">Culinary Herbs Only</label>
+					<input type="checkbox" id="culinary-only-option" />
+					<p>
+						*Obivously all herbs can be cooked and brewed into tea, this will list only the herbs that are
+						best known to add flavor to solid cooked food and salads.
+					</p>
+				</div>
+				<button class="see-herbs-btn" id="see-herbs-btn">See Herbs</button>
 			</div>
-			<button class="see-herbs-btn" id="see-herbs-btn">See Herbs</button>
-		</div>
-	</main>
+		</main>
 		<div class="herbs-modal" id="herbs-modal">
+			<h2 class="herbs-modal-header" id="herbs-modal-header"></h2>
 			<button class="herbs-modal-close-btn" id="herbs-modal-close-btn">X</button>
+
 			<div class="herbs-modal-inner" id="herbs-modal-inner"></div>
 		</div>
-	<script src="./scripts.js" type="module"></script>
-</body>
-
+		<script src="./scripts.js" type="module"></script>
+	</body>
 </html>

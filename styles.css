@@ -120,7 +120,7 @@ label{
     justify-content: center;
     border: 1px solid #252525;
     border-radius: 5px;
-    width: 80%;
+    width: 90vw;
     height: 80svh;
     background-color: #fff0ee;
 }
@@ -136,7 +136,7 @@ label{
 }
 
 .herbs-modal-inner a {
-    color: green;
+    color: #386641;
     text-align: center;
     /*width: 100%;*/
 }
@@ -153,9 +153,9 @@ label{
 
 .herb-img:hover,
 .herb-img:focus{
-    width: 200px;
-    height: 200px;
-    transition: 0.25s;
+    width: 180px;
+    height: 180px;
+    transition: 1s;
 }
 
 .herbs-modal-close-btn{
@@ -171,8 +171,34 @@ label{
     cursor: pointer;
 }
 
+.herbs-modal-header{
+    color: #252525;
+    position: absolute;
+    top: 2%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.herbs-modal-header span{
+    color: #386641;
+}
+
 .herbs-modal-close-btn:hover{
     color: white;
     background-color: #bd301d;
     border: 2px solid #bd301d;
+}
+
+/*MEDIA QUERIES*/
+
+@media (orientation:landscape) {
+    .herbs-modal {
+        
+     height: 70svh;   
+    }
+    
+    .herbs-modal-inner {
+        height: 70%;
+    }
 }

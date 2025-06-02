@@ -1,6 +1,6 @@
 export const herbsData = [
     {
-        benefits: ["medicinal", "anti-oxidant"],
+        benefits: ["Medicinal", "Anti-oxidant"],
         name: "Oregano",
         isCulinary: true,
         image: "oregano.jpg",
@@ -8,7 +8,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Oregano"
     },
     {
-        benefits: ["medicinal", "anti-oxidant", "anti-inflammatory", "anti-bacterial"],
+        benefits: ["Medicinal", "Anti-oxidant", "Anti-inflammatory", "Anti-bacterial"],
         name: "Basil",
         isCulinary: true,
         image: "basil.jpg",
@@ -16,7 +16,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Basil"
     },
     {
-        benefits: ["medicinal", "anti-inflammatory"],
+        benefits: ["Medicinal", "Anti-inflammatory"],
         name: "nettle",
         isCulinary: true,
         image: "nettle.jpg",
@@ -24,7 +24,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Urtica"
     },
     {
-        benefits: ["medicinal", "anti-microbial"],
+        benefits: ["Medicinal", "Anti-microbial"],
         name: "thyme",
         isCulinary: true,
         image: "thyme.jpg",
@@ -32,7 +32,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Thyme"
     },
     {
-        benefits: ["medicinal", "anti-inflammatory", "anti-oxidant", "digestive", "immune-booster"],
+        benefits: ["Medicinal", "Anti-inflammatory", "Anti-oxidant", "Digestive", "immune-booster"],
         name: "Ginger",
         isCulinary: true,
         image: "ginger.jpg",
@@ -40,7 +40,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Ginger"
     },
     {
-        benefits: ["medicinal", "sedative", "calming", "anti-stress", "sedative"],
+        benefits: ["Medicinal", "Sedative", "Calming", "Anti-stress", "Sedative"],
         name: "Lavender",
         isCulinary: true,
         image: "lavender.jpg",
@@ -48,7 +48,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Lavandula"
     },
     {
-        benefits: ["medicinal", "sedative", "anti-stress", "digestive", "anti-inflammatory", "skin-soothing"],
+        benefits: ["Medicinal", "Sedative", "Anti-stress", "Digestive", "Anti-inflammatory", "Skin-soothing"],
         name: "Chamomile",
         isCulinary: true,
         image: "chamomile.jpg",
@@ -56,7 +56,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Chamomile"
     },
     {
-        benefits: ["medicinal", "sedative", "anti-stress", "digestive"],
+        benefits: ["Medicinal", "Sedative", "Anti-stress", "Digestive"],
         name: "Melissa",
         isCulinary: true,
         image: "melissa.jpg",
@@ -64,7 +64,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Lemon_balm"
     },
     {
-        benefits: ["medicinal", "immune-booster"],
+        benefits: ["Medicinal", "immune-booster"],
         name: "echinacea",
         isCulinary: false,
         image: "echinacea.jpg",
@@ -72,7 +72,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Echinacea"
     },
     {
-        benefits: ["medicinal", "anti-inflammatory", "anti-bacterial", "anti-stress"],
+        benefits: ["Medicinal", "Anti-inflammatory", "Anti-bacterial", "Anti-stress"],
         name: "St. John's Wort",
         isCulinary: false,
         image: "st-johns-wort.jpg",
@@ -80,7 +80,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Hypericum_perforatum"
     },
     {
-        benefits: ["medicinal", "anti-inflammatory", "astringent", "skin-soothing"],
+        benefits: ["Medicinal", "Anti-inflammatory", "astringent", "Skin-soothing"],
         name: "Witch Hazel",
         isCulinary: false,
         image: "witch-hazel.jpg",
@@ -88,7 +88,7 @@ export const herbsData = [
         urlLink: "https://en.wikipedia.org/wiki/Witch-hazel"
     },
     {
-        benefits: ["medicinal", "digestive", "anti-stress", "sedative"],
+        benefits: ["Medicinal", "Digestive", "Anti-stress", "Sedative"],
         name: "Catnip",
         isCulinary: false,
         image: "catnip.jpg",
